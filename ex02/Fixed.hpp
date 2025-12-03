@@ -1,9 +1,8 @@
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
-#include <iostream>
-#include <ostream>
 #include <cmath>
+#include <iostream>
 
 class Fixed {
 
@@ -13,8 +12,12 @@ public:
     Fixed(const float number);
     Fixed(const Fixed &other);
     Fixed &operator=(const Fixed &other);
-    bool operator<(const Fixed &other);
-    bool operator>(const Fixed &other);
+    bool operator<(const Fixed &other) const;
+    bool operator>(const Fixed &other) const;
+    bool operator<=(const Fixed &other) const;
+    bool operator>=(const Fixed &other) const;
+    bool operator==(const Fixed &other) const;
+    bool operator!=(const Fixed &other) const;
     ~Fixed();
 
     int getRawBits() const;

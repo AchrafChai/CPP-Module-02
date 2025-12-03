@@ -34,12 +34,28 @@ Fixed &Fixed::operator=(const Fixed &other) {
     return *this;
 }
 
-bool Fixed::operator<(const Fixed &other) {
-    return this->toFloat() < other.toFloat();
+bool Fixed::operator<(const Fixed &other) const {
+    return value < other.value;
 }
 
-bool Fixed::operator>(const Fixed &other) {
-    return this->toFloat() > other.toFloat();
+bool Fixed::operator>(const Fixed &other) const {
+    return value > other.value;
+}
+
+bool Fixed::operator<=(const Fixed &other) const {
+    return value <= other.value;
+}
+
+bool Fixed::operator>=(const Fixed &other) const {
+    return value >= other.value;
+}
+
+bool Fixed::operator==(const Fixed &other) const {
+    return value == other.value;
+}
+
+bool Fixed::operator!=(const Fixed &other) const {
+    return value != other.value;
 }
 
 std::ostream &operator<<(std::ostream &os, const Fixed &obj)
