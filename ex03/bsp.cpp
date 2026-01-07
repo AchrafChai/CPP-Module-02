@@ -1,5 +1,7 @@
 #include "Point.hpp"
 
+// area = 1/2 * |x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)|
+
 Fixed area(Point const &a, Point const &b, Point const &c) {
     Fixed tmp = ((a.getX() * (b.getY() - c.getY())) +
                  (b.getX() * (c.getY() - a.getY())) +

@@ -2,7 +2,7 @@
 
 const int Fixed::fraction = 8;
 
-Fixed::Fixed() : value(0) {};
+Fixed::Fixed() : value(0) {}
 
 Fixed::Fixed(const int number) : value(number * (1 << fraction)) {}
 
@@ -18,7 +18,7 @@ int Fixed::toInt(void) const {
 
 Fixed::Fixed(const Fixed &other) {
     *this = other;
-};
+}
 
 Fixed &Fixed::operator=(const Fixed &other) {
     if (this != &other)
