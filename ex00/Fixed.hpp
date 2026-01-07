@@ -4,7 +4,6 @@
 #include <iostream>
 
 class Fixed {
-
 public:
     Fixed();
     Fixed(const Fixed &other);
